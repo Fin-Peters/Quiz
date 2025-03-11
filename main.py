@@ -1,11 +1,16 @@
-import CombinedQuiz
-catagory_ans = ''
+import intro
+import os
+import reader
 
-def intro():
-    catagory_ans = input('What catagory would you like to play? (history, science, math, or random)')
-    pass#intro and catatgory selection
+
+
+def filter_topic():
+    print("What topic would you like to play? (history, science, math, or random)")
+    topic = input(":")
+
 
 
 def main():
+    filePath = "CombinedQuiz.json"
 
     pass
