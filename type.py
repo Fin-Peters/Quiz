@@ -1,0 +1,2 @@
+from terminaltexteffects.effects.effect_errorcorrect import ErrorCorrect
+
