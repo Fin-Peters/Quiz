@@ -2,8 +2,14 @@ import intro
 import os
 import reader
 
+i = 0
 def filter_topic():
-    print("What topic would you like to play? (1) History\n (2) Chemistry\n (3) Biology\n (4) Games\n (5) General")
+    filePath = "CombinedQuiz.json"
+    questionDict = reader.reader(filePath)
+    print("What topic would you like to play?")
+    for topic in questionDict.keys():
+        print(f"({i}) {topic}")
+        i += i
     topic = input(":")
     return topic
 
@@ -11,3 +17,6 @@ def main():
     filePath = "CombinedQuiz.json"
     questionDict = reader.reader(filePath)
     topic = filter_topic()
+
+filter_topic()
+main()
