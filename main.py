@@ -3,12 +3,13 @@ import os
 import reader
 import filterer
 
+filePath = "CombinedQuiz.json"
+questionDict = reader.reader(filePath)
 
 
 def main():
-    filterer.filter_topic()
-    filePath = "CombinedQuiz.json"
-    questionDict = reader.reader(filePath)
+    topic = filterer.filter_topic(questionDict)
+    filterer.show_questions(topic, questionDict)
 
 
 
