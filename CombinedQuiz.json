@@ -1,29 +1,29 @@
 {
     "Biology": [
         {
-            "question": "Who was the first President of the United States?",
-            "answer": "George Washington",
-            "options": ["Thomas Jefferson", "Abraham Lincoln", "John Adams"]
+            "question": "What is the powerhouse of the cell?",
+            "answer": "Mitochondria",
+            "options": ["Nucleus", "Ribosome", "Chloroplast"]
         },
         {
-            "question": "In which year did the Titanic sink?",
-            "answer": "1912",
-            "options": ["1905", "1918", "1923"]
+            "question": "What is the process by which plants make their food?",
+            "answer": "Photosynthesis",
+            "options": ["Respiration", "Digestion", "Fermentation"]
         },
         {
-            "question": "Who discovered penicillin?",
-            "answer": "Alexander Fleming",
-            "options": ["Marie Curie", "Louis Pasteur", "Gregor Mendel"]
+            "question": "What is the basic unit of life?",
+            "answer": "Cell",
+            "options": ["Tissue", "Organ", "Organism"]
         },
         {
-            "question": "What is the capital of France?",
-            "answer": "Paris",
-            "options": ["London", "Berlin", "Madrid"]
+            "question": "Which blood cells help fight infections?",
+            "answer": "White blood cells",
+            "options": ["Red blood cells", "Platelets", "Plasma"]
         },
         {
-            "question": "Who wrote 'Romeo and Juliet'?",
-            "answer": "William Shakespeare",
-            "options": ["Charles Dickens", "Jane Austen", "Mark Twain"]
+            "question": "What is the genetic material in most living organisms?",
+            "answer": "DNA",
+            "options": ["RNA", "Protein", "Lipids"]
         }
     ],
     "History": [
@@ -55,56 +55,57 @@
     ],
     "Games": [
         {
-            "question": "Who was the first President of the United States?",
-            "answer": "George Washington",
-            "options": ["Thomas Jefferson", "Abraham Lincoln", "John Adams"]
+            "question": "What is the name of the main character in The Legend of Zelda series?",
+            "answer": "Link",
+            "options": ["Zelda", "Ganondorf", "Epona"]
         },
         {
-            "question": "In which year did the Titanic sink?",
-            "answer": "1912",
-            "options": ["1905", "1918", "1923"]
+            "question": "In Dark Souls, what is the name of the first boss you encounter?",
+            "answer": "Asylum Demon",
+            "options": ["Taurus Demon", "Bell Gargoyle", "Capra Demon"]
+
         },
         {
-            "question": "Who discovered penicillin?",
-            "answer": "Alexander Fleming",
-            "options": ["Marie Curie", "Louis Pasteur", "Gregor Mendel"]
+            "question": "What is the best-selling video game of all time?",
+            "answer": "Minecraft",
+            "options": ["Tetris", "Grand Theft Auto V", "Fortnite"]
         },
         {
-            "question": "What is the capital of France?",
-            "answer": "Paris",
-            "options": ["London", "Berlin", "Madrid"]
+            "question": "In which game do players compete to destroy the opposing team's Nexus?",
+            "answer": "League of Legends",
+            "options": ["Dota 2", "World of Warcraft", "Overwatch"]
         },
         {
-            "question": "Who wrote 'Romeo and Juliet'?",
-            "answer": "William Shakespeare",
-            "options": ["Charles Dickens", "Jane Austen", "Mark Twain"]
+            "question": "What is the name of the fictional world where the game Skyrim takes place?",
+            "answer": "Tamriel",
+            "options": ["Hyrule", "Azeroth", "Westeros"]
         }
     ],
     "Chemistry": [
         {
-            "question": "Who was the first President of the United States?",
-            "answer": "George Washington",
-            "options": ["Thomas Jefferson", "Abraham Lincoln", "John Adams"]
+            "question": "What is the most abundant gas in Earth's atmosphere?",
+            "answer": "Nitrogen",
+            "options": ["Oxygen", "Carbon Dioxide", "Argon"]
         },
         {
-            "question": "In which year did the Titanic sink?",
-            "answer": "1912",
-            "options": ["1905", "1918", "1923"]
+            "question": "What is the chemical formula for table salt?",
+            "answer": "NaCl",
+            "options": ["KCl", "Na2CO3", "CaCl2"]
         },
         {
-            "question": "Who discovered penicillin?",
-            "answer": "Alexander Fleming",
-            "options": ["Marie Curie", "Louis Pasteur", "Gregor Mendel"]
+            "question": "What is the pH of pure water at 25°C?",
+            "answer": "7",
+            "options": ["6", "8", "9"]
         },
         {
-            "question": "What is the capital of France?",
-            "answer": "Paris",
-            "options": ["London", "Berlin", "Madrid"]
+            "question": "Who is known as the father of modern chemistry?",
+            "answer": "Antoine Lavoisier",
+            "options": ["Dmitri Mendeleev", "John Dalton", "Robert Boyle"]
         },
         {
-            "question": "Who wrote 'Romeo and Juliet'?",
-            "answer": "William Shakespeare",
-            "options": ["Charles Dickens", "Jane Austen", "Mark Twain"]
+            "question": "What is the name of the process by which a liquid changes into a gas?",
+            "answer": "Evaporation",
+            "options": ["Condensation", "Sublimation", "Freezing"]
         }
     ],
     "General": [

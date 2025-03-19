@@ -45,17 +45,17 @@ def show_questions(topic, questionDict, score, max_score):
             # Check if the user's answer is correct
             correct_option = question["answer"]
             if options[int(answer) - 1] == correct_option:
-                print("Correct!")
+                print("Correct!\n")
                 score += 1
                 max_score += 1
             elif options[int(answer) - 1] != correct_option:
-                print("Wrong!")
+                print("Wrong!\n")
                 max_score += 1
             else:
                 print("Invalid answer. Please choose a valid answer.")
                 return show_questions(topic, questionDict, score, max_score)
 
-            print(f"Your score is {score}/{max_score}")
+            print(f"Your score is {score}/{max_score}\n")
 
             i = 1
     else:

@@ -1,4 +1,4 @@
-import intro
+import effects
 import reader
 import filterer
 
