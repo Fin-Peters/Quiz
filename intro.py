@@ -1,4 +1,4 @@
-from terminaltexteffects.effects.effect_vhstape import VHSTape
+from terminaltexteffects.effects.effect_laseretch import LaserEtch
 
 import sys
 from time import sleep  
@@ -7,7 +7,7 @@ import os
 
 # re-usable code block for tte 
 def intro(prompt_text):
-    effect = VHSTape(prompt_text)
+    effect = LaserEtch(prompt_text)
     effect.effect_config.final_gradient_frames = 1
     with effect.terminal_output(end_symbol=" ") as terminal:
         for frame in effect:
