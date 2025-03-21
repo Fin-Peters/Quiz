@@ -64,8 +64,8 @@ def show_questions(topic, questionDict, score, max_score):
                     print("Wrong!\n")
                     max_score += 1
             else:
-                print("Invalid answer. Please choose a valid answer.")
-                return show_questions(topic, questionDict, score, max_score)
+                print("Invalid answer. Please choose a valid answer.\n")
+                answer = ans(":").strip()
 
             print(f"Your score is {score}/{max_score}\n")
 
