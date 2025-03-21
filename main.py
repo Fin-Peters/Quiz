@@ -7,6 +7,7 @@ questionDict = reader.reader(filePath)
 score = 0
 max_score = 0
 
+
 def main():
     # clears terminal
     os.system('cls||clear')

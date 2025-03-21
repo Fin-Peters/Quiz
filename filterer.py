@@ -1,6 +1,9 @@
 import random
 from time import sleep
 from effects import opps
+from effects import ans
+
+
 def filter_topic(questionDict):
     print("What topic would you like to play?")
     # Create a list of topics so we can refer to them by index
@@ -29,8 +32,13 @@ def filter_topic(questionDict):
 def show_questions(topic, questionDict, score, max_score):
     i = 1
     if topic in questionDict:
+        
         print(f"Questions for topic: {topic}")
-        for question in questionDict[topic]:
+        
+        questions = questionDict[topic]
+        random.shuffle(questions)
+
+        for question in questions:
             print(question["question"])
             
             # Shuffle the options randomly
@@ -43,17 +51,18 @@ def show_questions(topic, questionDict, score, max_score):
             for i, option in enumerate(options, 1):
                 opps(f"({i}) {option}")
                 
-            answer = input(":").strip()
+            answer = ans(":").strip()
             
             # Check if the user's answer is correct
             correct_option = question["answer"]
-            if options[int(answer) - 1] == correct_option:
-                print("Correct!\n")
-                score += 1
-                max_score += 1
-            elif options[int(answer) - 1] != correct_option:
-                print("Wrong!\n")
-                max_score += 1
+            if answer.isdigit():
+                if options[int(answer) - 1] == correct_option:
+                    print("Correct!\n")
+                    score += 1
+                    max_score += 1
+                elif options[int(answer) - 1] != correct_option:
+                    print("Wrong!\n")
+                    max_score += 1
             else:
                 print("Invalid answer. Please choose a valid answer.")
                 return show_questions(topic, questionDict, score, max_score)
