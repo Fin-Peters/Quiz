@@ -1,5 +1,6 @@
 import random
-
+from time import sleep
+from effects import opps
 def filter_topic(questionDict):
     print("What topic would you like to play?")
     # Create a list of topics so we can refer to them by index
@@ -17,11 +18,13 @@ def filter_topic(questionDict):
     if 1 <= topic_number <= len(topics):
         # Get the topic name using the input number (1-indexed)
         topic = topics[topic_number - 1]
+        sleep (1)
         return topic
+    
     else:
         print("Invalid topic number. Please choose a valid number.")
         return filter_topic(questionDict)
-
+    
 
 def show_questions(topic, questionDict, score, max_score):
     i = 1
@@ -38,7 +41,7 @@ def show_questions(topic, questionDict, score, max_score):
             
             # Display the options
             for i, option in enumerate(options, 1):
-                print(f"({i}) {option}")
+                opps(f"({i}) {option}")
                 
             answer = input(":").strip()
             
