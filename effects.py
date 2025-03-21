@@ -5,8 +5,7 @@ from terminaltexteffects.utils.graphics import Gradient, Color
 
 import sys
 from time import sleep  
-import tkinter as tk
-import os
+
 
 # re-usable code block for tte also the intro
 def intro(prompt_text):
@@ -16,10 +15,21 @@ def intro(prompt_text):
         for frame in effect:
             terminal.print(frame)
             sys.stdout.write("\033[K")
-            #sys.stdout.flush()
+            sys.stdout.flush()
             sleep(.01)
     print("")
 
+def typer(prompt_text):
+    effect = Wipe(prompt_text)
+    effect.effect_config.final_gradient_frames = 1
+    with effect.terminal_output(end_symbol=" ") as terminal:
+        for frame in effect:
+            terminal.print(frame)
+            sys.stdout.write("\033[K")
+            sys.stdout.flush()
+            sleep(.01)
+    print("")
+     
 
 def opps(prompt_text):
     col = "0da5eb" 
