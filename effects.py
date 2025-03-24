@@ -46,7 +46,7 @@ def opps(prompt_text):
     print("")
 
 def scoring(prompt_text):
-    col = "0da5eb" 
+    col = "e28c1e" 
     rgb = tuple(int(col.lstrip("#")[i:i+2], 16) for i in (0, 2, 4))
     
     # ANSI escape sequence for RGB color
@@ -58,6 +58,22 @@ def scoring(prompt_text):
             sys.stdout.flush()
             sleep(.005)
     print("")
+
+def purp(prompt_text):
+    col = "451eea" 
+    rgb = tuple(int(col.lstrip("#")[i:i+2], 16) for i in (0, 2, 4))
+    
+    # ANSI escape sequence for RGB color
+    color_start = f"\033[38;2;{rgb[0]};{rgb[1]};{rgb[2]}m"
+    color_end = "\033[0m"  # Reset color to default
+
+    for char in prompt_text:
+            sys.stdout.write(color_start + char + color_end)
+            sys.stdout.flush()
+            sleep(.005)
+    print("")
+
+
 
 def ans(prompt_text: str):
     effect = Print(prompt_text)

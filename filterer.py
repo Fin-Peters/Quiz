@@ -4,7 +4,7 @@ from effects import opps
 from effects import ans
 from effects import typer
 from effects import scoring
-
+from effects import purp
 
 def filter_topic(questionDict):
     typer("What topic would you like to play?\n")
@@ -39,14 +39,14 @@ def show_questions(topic, questionDict, score, max_score):
     i = 1
     if topic in questionDict:
         
-        print(f"Questions for topic: {topic}")
-        
+        print(f"Questions for topic: {topic}\n")
+        sleep(.5)
         questions = questionDict[topic]
         random.shuffle(questions)
 
         for question in questions:
-            print(question["question"])
-            
+            purp(question["question"])
+            sleep(.25)
             # Shuffle the options randomly
             options = question["options"]
             correct_answer = question["answer"]
@@ -61,7 +61,7 @@ def show_questions(topic, questionDict, score, max_score):
             
             # Check if the user's answer is correct
             correct_option = question["answer"]
-            if answer.isdigit():
+            if answer.isdigit() and 1 <= int(answer) <= len(options):
                 if options[int(answer) - 1] == correct_option:
                     print("Correct!\n")
                     score += 1
