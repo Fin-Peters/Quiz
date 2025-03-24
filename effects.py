@@ -45,6 +45,20 @@ def opps(prompt_text):
             sleep(.05)
     print("")
 
+def scoring(prompt_text):
+    col = "0da5eb" 
+    rgb = tuple(int(col.lstrip("#")[i:i+2], 16) for i in (0, 2, 4))
+    
+    # ANSI escape sequence for RGB color
+    color_start = f"\033[38;2;{rgb[0]};{rgb[1]};{rgb[2]}m"
+    color_end = "\033[0m"  # Reset color to default
+
+    for char in prompt_text:
+            sys.stdout.write(color_start + char + color_end)
+            sys.stdout.flush()
+            sleep(.005)
+    print("")
+
 def ans(prompt_text: str):
     effect = Print(prompt_text)
     effect.effect_config.final_gradient_frames = 1
