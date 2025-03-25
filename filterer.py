@@ -6,6 +6,7 @@ from effects import typer
 from effects import scoring
 from effects import purp
 from effects import gold
+from effects import red
 
 def filter_topic(questionDict):
     typer("What topic would you like to play?\n")
@@ -32,12 +33,12 @@ def filter_topic(questionDict):
                 return topic
             
             else:
-                gold("Invalid topic number. Please choose a valid number.")
+                red("Invalid topic number. Please choose a valid number.")
                 topic_number = int(input(":").strip())
                 print("")
         
         else:
-            gold("Invalid topic number. Please choose a valid number.")
+            red("Invalid topic number. Please choose a valid number.")
             topic_number = int(input(":").strip())
             print("")
     
@@ -80,12 +81,12 @@ def show_questions(topic, questionDict, score, max_score):
                         max_score += 1
                         break
                 else:
-                    print("Invalid answer. Please choose a valid answer.\n")
+                    red("Invalid answer. Please choose a valid answer.\n")
                     answer = ans(":").strip()
 
                 scoring(f"Your score is {score}/{max_score}\n")
 
                 i = 1
     else:
-        print("No questions available for this topic.")
+        red("No questions available for this topic.")
         
