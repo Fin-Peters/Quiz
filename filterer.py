@@ -5,6 +5,7 @@ from effects import ans
 from effects import typer
 from effects import scoring
 from effects import purp
+from effects import gold
 
 def filter_topic(questionDict):
     typer("What topic would you like to play?\n")
@@ -22,24 +23,30 @@ def filter_topic(questionDict):
     print("")
     
     # Check if the number is within the range of available topics
-    if topic_number.is_integer():
-        if 1 <= topic_number <= len(topics):
-            # Get the topic name using the input number (1-indexed)
-            topic = topics[topic_number - 1]
-            sleep (1)
-            return topic
-    
-    else:
-        print("Invalid topic number. Please choose a valid number.")
-        topic_number = int(input(":").strip())
-        print("")
+    while True:
+        if topic_number.is_integer():
+            if 1 <= topic_number <= len(topics):
+                # Get the topic name using the input number (1-indexed)
+                topic = topics[topic_number - 1]
+                sleep (1)
+                return topic
+            
+            else:
+                gold("Invalid topic number. Please choose a valid number.")
+                topic_number = int(input(":").strip())
+                print("")
+        
+        else:
+            gold("Invalid topic number. Please choose a valid number.")
+            topic_number = int(input(":").strip())
+            print("")
     
 
 def show_questions(topic, questionDict, score, max_score):
     i = 1
     if topic in questionDict:
         
-        print(f"Questions for topic: {topic}\n")
+        gold(f"Questions for topic: {topic}\n")
         sleep(.5)
         questions = questionDict[topic]
         random.shuffle(questions)
@@ -61,21 +68,24 @@ def show_questions(topic, questionDict, score, max_score):
             
             # Check if the user's answer is correct
             correct_option = question["answer"]
-            if answer.isdigit() and 1 <= int(answer) <= len(options):
-                if options[int(answer) - 1] == correct_option:
-                    print("Correct!\n")
-                    score += 1
-                    max_score += 1
-                elif options[int(answer) - 1] != correct_option:
-                    print("Wrong!\n")
-                    max_score += 1
-            else:
-                print("Invalid answer. Please choose a valid answer.\n")
-                answer = ans(":").strip()
+            while True:
+                if answer.isdigit() and 1 <= int(answer) <= len(options):
+                    if options[int(answer) - 1] == correct_option:
+                        gold("Correct!\n")
+                        score += 1
+                        max_score += 1
+                        break
+                    elif options[int(answer) - 1] != correct_option:
+                        gold("Wrong!\n")
+                        max_score += 1
+                        break
+                else:
+                    print("Invalid answer. Please choose a valid answer.\n")
+                    answer = ans(":").strip()
 
-            scoring(f"Your score is {score}/{max_score}\n")
+                scoring(f"Your score is {score}/{max_score}\n")
 
-            i = 1
+                i = 1
     else:
         print("No questions available for this topic.")
-        filter_topic(questionDict)
+        
