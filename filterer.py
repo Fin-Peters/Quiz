@@ -20,12 +20,13 @@ def filter_topic(questionDict):
 
     
     # Ask the user to input a number corresponding to the topic
-    topic_number = int(input(":").strip())
+    topic_number = (input(":").strip())
     print("")
     
     # Check if the number is within the range of available topics
     while True:
-        if topic_number.is_integer():
+        if topic_number.isdigit():
+            topic_number = int(topic_number)
             if 1 <= topic_number <= len(topics):
                 # Get the topic name using the input number (1-indexed)
                 topic = topics[topic_number - 1]
@@ -34,12 +35,12 @@ def filter_topic(questionDict):
             
             else:
                 red("Invalid topic number. Please choose a valid number.")
-                topic_number = int(input(":").strip())
+                topic_number = (input(":").strip())
                 print("")
         
         else:
             red("Invalid topic number. Please choose a valid number.")
-            topic_number = int(input(":").strip())
+            topic_number = (input(":").strip())
             print("")
     
 
@@ -75,16 +76,16 @@ def show_questions(topic, questionDict, score, max_score):
                         gold("Correct!\n")
                         score += 1
                         max_score += 1
+                        scoring(f"Your score is {score}/{max_score}\n")
                         break
                     elif options[int(answer) - 1] != correct_option:
                         gold("Wrong!\n")
                         max_score += 1
+                        scoring(f"Your score is {score}/{max_score}\n")
                         break
                 else:
                     red("Invalid answer. Please choose a valid answer.\n")
                     answer = ans(":").strip()
-
-                scoring(f"Your score is {score}/{max_score}\n")
 
                 i = 1
     else:
