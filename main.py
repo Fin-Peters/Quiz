@@ -5,11 +5,11 @@ import ending
 
 filePath = "CombinedQuiz.json"
 questionDict = reader.reader(filePath)
-score = 0
-max_score = 0
-redo = False
 
 def main():
+    redo = False
+    score = 0
+    max_score = 0
     # clears terminal
     os.system('cls||clear')
     topic = filterer.filter_topic(questionDict )
