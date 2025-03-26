@@ -1,7 +1,9 @@
-from terminaltexteffects.effects.effect_laseretch import LaserEtch
+from terminaltexteffects.effects.effect_crumble import Crumble
+from terminaltexteffects.effects.effect_vhstape import VHSTape
+from terminaltexteffects.effects.effect_burn import Burn
 from terminaltexteffects.effects.effect_wipe import Wipe
 from terminaltexteffects.effects.effect_print import Print
-from terminaltexteffects.utils.graphics import Gradient, Color
+
 
 import sys
 from time import sleep  
@@ -9,7 +11,29 @@ from time import sleep
 
 # re-usable code block for tte also the intro
 def intro(prompt_text):
-    effect = LaserEtch(prompt_text)
+    effect = Burn(prompt_text)
+    effect.effect_config.final_gradient_frames = 1
+    with effect.terminal_output(end_symbol=" ") as terminal:
+        for frame in effect:
+            terminal.print(frame)
+            sys.stdout.write("\033[K")
+            sys.stdout.flush()
+            sleep(.01)
+    print("")
+
+def BigEnding(prompt_text):
+    effect = VHSTape(prompt_text)
+    effect.effect_config.final_gradient_frames = 1
+    with effect.terminal_output(end_symbol=" ") as terminal:
+        for frame in effect:
+            terminal.print(frame)
+            sys.stdout.write("\033[K")
+            sys.stdout.flush()
+            sleep(.01)
+    print("")
+
+def Ending(prompt_text):
+    effect = Crumble(prompt_text)
     effect.effect_config.final_gradient_frames = 1
     with effect.terminal_output(end_symbol=" ") as terminal:
         for frame in effect:
@@ -29,8 +53,7 @@ def typer(prompt_text):
             sys.stdout.flush()
             sleep(.01)
     print("")
-     
-
+ 
 def opps(prompt_text):
     col = "0da5eb" 
     rgb = tuple(int(col.lstrip("#")[i:i+2], 16) for i in (0, 2, 4))

@@ -24,6 +24,36 @@
             "question": "What is the genetic material in most living organisms?",
             "answer": "DNA",
             "options": ["RNA", "Protein", "Lipids"]
+        },
+        {
+            "question": "What organelle is responsible for photosynthesis in plants?",
+            "answer": "Chloroplast",
+            "options": ["Mitochondria", "Nucleus", "Ribosome"]
+        },
+        {
+            "question": "What is the term for animals that eat both plants and animals?",
+            "answer": "Omnivores",
+            "options": ["Herbivores", "Carnivores", "Detritivores"]
+        },
+        {
+            "question": "What is the name of the process by which cells divide to form two identical daughter cells?",
+            "answer": "Mitosis",
+            "options": ["Meiosis", "Binary Fission", "Budding"]
+        },
+        {
+            "question": "What is the largest organ in the human body?",
+            "answer": "Skin",
+            "options": ["Liver", "Heart", "Lungs"]
+        },
+        {
+            "question": "What type of blood vessel carries blood away from the heart?",
+            "answer": "Arteries",
+            "options": ["Veins", "Capillaries", "Lymphatic Vessels"]
+        },
+        {
+            "question": "What is the term for the study of fungi?",
+            "answer": "Mycology",
+            "options": ["Botany", "Zoology", "Ecology"]
         }
     ],
     "History": [
@@ -51,6 +81,36 @@
             "question": "Who wrote 'Romeo and Juliet'?",
             "answer": "William Shakespeare",
             "options": ["Charles Dickens", "Jane Austen", "Mark Twain"]
+        },
+        {
+            "question": "Who was the British Prime Minister during most of World War II?",
+            "answer": "Winston Churchill",
+            "options": ["Neville Chamberlain", "Clement Attlee", "Anthony Eden"]
+        },
+        {
+            "question": "What year did the Berlin Wall fall?",
+            "answer": "1989",
+            "options": ["1987", "1990", "1991"]
+        },
+        {
+            "question": "Who was the first emperor of Rome?",
+            "answer": "Augustus",
+            "options": ["Julius Caesar", "Nero", "Caligula"]
+        },
+        {
+            "question": "What was the name of the ship that brought the Pilgrims to America in 1620?",
+            "answer": "Mayflower",
+            "options": ["Santa Maria", "Endeavour", "Beagle"]
+        },
+        {
+            "question": "Which war was fought between the North and South regions of the United States?",
+            "answer": "The Civil War",
+            "options": ["The Revolutionary War", "The War of 1812", "The Mexican-American War"]
+        },
+        {
+            "question": "Who was the leader of the Soviet Union during the Cuban Missile Crisis?",
+            "answer": "Nikita Khrushchev",
+            "options": ["Joseph Stalin", "Leonid Brezhnev", "Mikhail Gorbachev"]
         }
     ],
     "Games": [
@@ -63,7 +123,6 @@
             "question": "In Dark Souls, what is the name of the first boss you encounter?",
             "answer": "Asylum Demon",
             "options": ["Taurus Demon", "Bell Gargoyle", "Capra Demon"]
-
         },
         {
             "question": "What is the best-selling video game of all time?",
@@ -79,6 +138,36 @@
             "question": "What is the name of the fictional world where the game Skyrim takes place?",
             "answer": "Tamriel",
             "options": ["Hyrule", "Azeroth", "Westeros"]
+        },
+        {
+            "question": "What is the name of the main antagonist in the Halo series?",
+            "answer": "The Covenant",
+            "options": ["The Flood", "The Prometheans", "The Banished"]
+        },
+        {
+            "question": "What is the name of the princess in the Mario series?",
+            "answer": "Princess Peach",
+            "options": ["Princess Daisy", "Rosalina", "Pauline"]
+        },
+        {
+            "question": "What is the name of the battle royale game developed by Epic Games?",
+            "answer": "Fortnite",
+            "options": ["PUBG", "Apex Legends", "Call of Duty: Warzone"]
+        },
+        {
+            "question": "What is the name of the protagonist in the God of War series?",
+            "answer": "Kratos",
+            "options": ["Zeus", "Ares", "Hercules"]
+        },
+        {
+            "question": "What is the name of the fictional city where Grand Theft Auto V takes place?",
+            "answer": "Los Santos",
+            "options": ["Vice City", "Liberty City", "San Fierro"]
+        },
+        {
+            "question": "What is the name of the AI companion in the Portal series?",
+            "answer": "GLaDOS",
+            "options": ["Cortana", "Wheatley", "HAL 9000"]
         }
     ],
     "Chemistry": [
@@ -106,33 +195,93 @@
             "question": "What is the name of the process by which a liquid changes into a gas?",
             "answer": "Evaporation",
             "options": ["Condensation", "Sublimation", "Freezing"]
+        },
+        {
+            "question": "What is the chemical symbol for gold?",
+            "answer": "Au",
+            "options": ["Ag", "Pb", "Fe"]
+        },
+        {
+            "question": "What is the name of the element with the atomic number 1?",
+            "answer": "Hydrogen",
+            "options": ["Helium", "Oxygen", "Nitrogen"]
+        },
+        {
+            "question": "What is the term for a substance that speeds up a chemical reaction?",
+            "answer": "Catalyst",
+            "options": ["Enzyme", "Reactant", "Inhibitor"]
+        },
+        {
+            "question": "What is the name of the process by which a solid turns directly into a gas?",
+            "answer": "Sublimation",
+            "options": ["Condensation", "Evaporation", "Deposition"]
+        },
+        {
+            "question": "What is the pH range of an acidic solution?",
+            "answer": "0-6",
+            "options": ["7-14", "7", "8-14"]
+        },
+        {
+            "question": "What is the name of the scientist who created the periodic table?",
+            "answer": "Dmitri Mendeleev",
+            "options": ["Marie Curie", "John Dalton", "Antoine Lavoisier"]
         }
     ],
     "General": [
         {
-            "question": "Who was the first President of the United States?",
-            "answer": "George Washington",
-            "options": ["Thomas Jefferson", "Abraham Lincoln", "John Adams"]
+            "question": "Who was the second President of the United States?",
+            "answer": "John Adams",
+            "options": ["Thomas Jefferson", "George Washington", "James Madison"]
         },
         {
-            "question": "In which year did the Titanic sink?",
-            "answer": "1912",
-            "options": ["1905", "1918", "1923"]
+            "question": "In which year did the United Nations officially come into existence?",
+            "answer": "1945",
+            "options": ["1939", "1940", "1950"]
         },
         {
-            "question": "Who discovered penicillin?",
-            "answer": "Alexander Fleming",
-            "options": ["Marie Curie", "Louis Pasteur", "Gregor Mendel"]
+            "question": "Who is credited with developing the theory of general relativity?",
+            "answer": "Albert Einstein",
+            "options": ["Isaac Newton", "Niels Bohr", "Galileo Galilei"]
         },
         {
-            "question": "What is the capital of France?",
-            "answer": "Paris",
-            "options": ["London", "Berlin", "Madrid"]
+            "question": "What is the largest desert in the world?",
+            "answer": "Antarctica",
+            "options": ["Sahara Desert", "Arctic Desert", "Gobi Desert"]
         },
         {
-            "question": "Who wrote 'Romeo and Juliet'?",
-            "answer": "William Shakespeare",
-            "options": ["Charles Dickens", "Jane Austen", "Mark Twain"]
+            "question": "Which ancient civilization built the Machu Picchu complex in Peru?",
+            "answer": "Inca",
+            "options": ["Maya", "Aztec", "Olmec"]
+        },
+        {
+            "question": "What is the smallest planet in our solar system?",
+            "answer": "Mercury",
+            "options": ["Mars", "Venus", "Pluto"]
+        },
+        {
+            "question": "What is the capital city of Australia?",
+            "answer": "Canberra",
+            "options": ["Sydney", "Melbourne", "Brisbane"]
+        },
+        {
+            "question": "What is the name of the longest river in the world?",
+            "answer": "Nile",
+            "options": ["Amazon", "Yangtze", "Mississippi"]
+        },
+        {
+            "question": "What is the term for animals that are active during the night?",
+            "answer": "Nocturnal",
+            "options": ["Diurnal", "Crepuscular", "Arboreal"]
+        },
+        {
+            "question": "What is the name of the largest ocean on Earth?",
+            "answer": "Pacific Ocean",
+            "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean"]
+        },
+        {
+            "question": "What is the name of the scientist who proposed the law of gravity?",
+            "answer": "Isaac Newton",
+            "options": ["Albert Einstein", "Galileo Galilei", "Johannes Kepler"]
         }
     ]
 }
