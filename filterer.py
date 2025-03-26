@@ -1,21 +1,15 @@
 import random
 from time import sleep
-from effects import opps
-from effects import ans
-from effects import typer
-from effects import scoring
-from effects import purp
-from effects import gold
-from effects import red
+import effects
 
 def filter_topic(questionDict):
-    typer("What topic would you like to play?\n")
+    effects.typer("What topic would you like to play?\n")
     # Create a list of topics so we can refer to them by index
     topics = list(questionDict.keys())
     
     # Print the topics with corresponding numbers
     for i, topic in enumerate(topics, start=1):
-        opps(f"({i}) {topic}")
+        effects.opps(f"({i}) {topic}")
     print("")
 
     
@@ -34,12 +28,12 @@ def filter_topic(questionDict):
                 return topic
             
             else:
-                red("Invalid topic number. Please choose a valid number.")
+                effects.red("Invalid topic number. Please choose a valid number.")
                 topic_number = (input(":").strip())
                 print("")
         
         else:
-            red("Invalid topic number. Please choose a valid number.")
+            effects.red("Invalid topic number. Please choose a valid number.")
             topic_number = (input(":").strip())
             print("")
     
@@ -48,13 +42,13 @@ def show_questions(topic, questionDict, score, max_score):
     i = 1
     if topic in questionDict:
         
-        gold(f"Questions for topic: {topic}\n")
+        effects.gold(f"Questions for topic: {topic}\n")
         sleep(.5)
         questions = questionDict[topic]
         random.shuffle(questions)
 
         for question in questions:
-            purp(question["question"])
+            effects.purp(question["question"])
             sleep(.25)
             # Shuffle the options randomly
             options = question["options"]
@@ -64,30 +58,30 @@ def show_questions(topic, questionDict, score, max_score):
             
             # Display the options
             for i, option in enumerate(options, 1):
-                opps(f"({i}) {option}")
+                effects.opps(f"({i}) {option}")
                 
-            answer = ans(":").strip()
+            answer = effects.ans(":").strip()
             
             # Check if the user's answer is correct
             correct_option = question["answer"]
             while True:
                 if answer.isdigit() and 1 <= int(answer) <= len(options):
                     if options[int(answer) - 1] == correct_option:
-                        gold("Correct!\n")
+                        effects.gold("Correct!\n")
                         score += 1
                         max_score += 1
-                        scoring(f"Your score is {score}/{max_score}\n")
+                        effects.scoring(f"Your score is {score}/{max_score}\n")
                         break
                     elif options[int(answer) - 1] != correct_option:
-                        gold("Wrong!\n")
+                        effects.gold("Wrong!\n")
                         max_score += 1
-                        scoring(f"Your score is {score}/{max_score}\n")
+                        effects.scoring(f"Your score is {score}/{max_score}\n")
                         break
                 else:
-                    red("Invalid answer. Please choose a valid answer.\n")
-                    answer = ans(":").strip()
+                    effects.red("Invalid answer. Please choose a valid answer.\n")
+                    answer = effects.ans(":").strip()
 
                 i = 1
     else:
-        red("No questions available for this topic.")
+        effects.red("No questions available for this topic.")
         
