@@ -71,12 +71,12 @@ def show_questions(topic, questionDict, score, max_score):
                         score += 1
                         max_score += 1
                         effects.scoring(f"Your score is {score}/{max_score}\n")
-                        break
+                        return score, max_score
                     elif options[int(answer) - 1] != correct_option:
                         effects.gold("Wrong!\n")
                         max_score += 1
                         effects.scoring(f"Your score is {score}/{max_score}\n")
-                        break
+                        return score, max_score
                 else:
                     effects.red("Invalid answer. Please choose a valid answer.\n")
                     answer = effects.ans(":").strip()

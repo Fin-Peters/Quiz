@@ -19,6 +19,7 @@ def intro(prompt_text):
             sys.stdout.write("\033[K")
             sys.stdout.flush()
             sleep(.01)
+
     print("")
 
 def BigEnding(prompt_text):
@@ -89,13 +90,12 @@ def purp(prompt_text):
     # ANSI escape sequence for RGB color
     color_start = f"\033[38;2;{rgb[0]};{rgb[1]};{rgb[2]}m"
     color_end = "\033[0m"  # Reset color to default
-
     for char in prompt_text:
-            sys.stdout.write(color_start + char + color_end)
-            sys.stdout.flush()
-            sleep(.005)
+                sys.stdout.write(color_start + char + color_end)
+                sys.stdout.flush()
+                sleep(.005)
     print("")
-
+   
 def red(prompt_text):
     col = "dc143c" 
     rgb = tuple(int(col.lstrip("#")[i:i+2], 16) for i in (0, 2, 4))
