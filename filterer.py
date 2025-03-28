@@ -13,7 +13,6 @@ def filter_topic(questionDict):
     print("")
 
     
-    # Ask the user to input a number corresponding to the topic
     topic_number = (input(":").strip())
     print("")
     
@@ -44,13 +43,14 @@ def show_questions(topic, questionDict, score, max_score):
         
         effects.gold(f"Questions for topic: {topic}\n")
         sleep(.5)
+        #shuffles the question order of appearance
         questions = questionDict[topic]
         random.shuffle(questions)
 
         for question in questions:
             effects.purp(question["question"])
             sleep(.25)
-            # Shuffle the options randomly
+            # Shuffle the options randomly/ add the correct answer to the options
             options = question["options"]
             correct_answer = question["answer"]
             options.append(correct_answer)
@@ -82,6 +82,7 @@ def show_questions(topic, questionDict, score, max_score):
                     answer = effects.ans(":").strip()
 
                 i = 1
+    #this should never be triggered but is a precaution incase something unexpected happens
     else:
         effects.red("No questions available for this topic.")
         
