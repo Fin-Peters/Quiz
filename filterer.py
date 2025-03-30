@@ -38,51 +38,47 @@ def filter_topic(questionDict):
     
 
 def show_questions(topic, questionDict, score, max_score):
-    i = 1
     if topic in questionDict:
-        
         effects.gold(f"Questions for topic: {topic}\n")
         sleep(.5)
-        #shuffles the question order of appearance
+        
+        # Shuffle the question order
         questions = questionDict[topic]
         random.shuffle(questions)
 
         for question in questions:
             effects.purp(question["question"])
             sleep(.25)
-            # Shuffle the options randomly/ add the correct answer to the options
-            options = question["options"]
-            correct_answer = question["answer"]
-            options.append(correct_answer)
+            
+            # Shuffle the options randomly and add the correct answer
+            options = question["options"] + [question["answer"]]
             random.shuffle(options)
             
             # Display the options
             for i, option in enumerate(options, 1):
                 effects.opps(f"({i}) {option}")
-                
-            answer = effects.ans(":").strip()
             
-            # Check if the user's answer is correct
-            correct_option = question["answer"]
+            # Get the user's answer
             while True:
+                answer = effects.ans(":").strip()
                 if answer.isdigit() and 1 <= int(answer) <= len(options):
-                    if options[int(answer) - 1] == correct_option:
-                        effects.gold("Correct!\n")
-                        score += 1
-                        max_score += 1
-                        effects.scoring(f"Your score is {score}/{max_score}\n")
-                        return score, max_score
-                    elif options[int(answer) - 1] != correct_option:
-                        effects.gold("Wrong!\n")
-                        max_score += 1
-                        effects.scoring(f"Your score is {score}/{max_score}\n")
-                        return score, max_score
+                    break
                 else:
                     effects.red("Invalid answer. Please choose a valid answer.\n")
-                    answer = effects.ans(":").strip()
-
-                i = 1
-    #this should never be triggered but is a precaution incase something unexpected happens
-    else:
-        effects.red("No questions available for this topic.")
+            
+            # Check if the user's answer is correct
+            if options[int(answer) - 1] == question["answer"]:
+                effects.gold("Correct!\n")
+                score += 1
+            else:
+                effects.gold("Wrong!\n")
+            
+            # Update max_score
+            max_score += 1
+            effects.scoring(f"Your score is {score}/{max_score}\n")
+            sleep(.5)
+    
+    # Return the final score and max_score after all questions are processed
+    return score, max_score
+                
         
