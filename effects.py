@@ -14,6 +14,7 @@ def intro(prompt_text):
     effect = Burn(prompt_text)
     effect.effect_config.final_gradient_frames = 1
     with effect.terminal_output(end_symbol=" ") as terminal:
+        #makes the effect print out each frame
         for frame in effect:
             terminal.print(frame)
             sys.stdout.write("\033[K")
