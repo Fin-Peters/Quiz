@@ -19,7 +19,7 @@ def intro(prompt_text):
             terminal.print(frame)
             sys.stdout.write("\033[K")
             sys.stdout.flush()
-            sleep(.01)
+            sleep(.000001)
 
     print("")
 
