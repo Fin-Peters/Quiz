@@ -6,5 +6,6 @@ The game gives you the option from select catagories and you choose one and answ
 
 Installation
 1. clone the repository https://github.com/Fin-Peters/Quiz
-2. navigate to the cloned repository
-3. run the game: python main.py
+2. pip install terminaltexteffects
+3. navigate to the cloned repository
+4. run the game: python main.py
