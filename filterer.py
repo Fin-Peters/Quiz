@@ -21,7 +21,7 @@ def filter_topic(questionDict):
         if topic_number.isdigit():
             topic_number = int(topic_number)
             if 1 <= topic_number <= len(topics):
-                # Get the topic name using the input number (1-indexed)
+                # Get the topic name using the input number (1-indexed) cause computer reading starts at 0
                 topic = topics[topic_number - 1]
                 sleep (1)
                 return topic
