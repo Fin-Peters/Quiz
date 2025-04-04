@@ -37,7 +37,7 @@ def filter_topic(questionDict):
             print("")
     
 
-def show_questions(topic, questionDict, score, max_score):
+def show_questions(topic, questionDict, score, max_score, incorrects):
     if topic in questionDict:
         effects.gold(f"Questions for topic: {topic}\n")
         sleep(.5)
@@ -72,13 +72,14 @@ def show_questions(topic, questionDict, score, max_score):
                 score += 1
             else:
                 effects.gold("Wrong!\n")
+                incorrects.append(question["question"])
             
             # Update max_score
             max_score += 1
             effects.scoring(f"Your score is {score}/{max_score}\n")
             sleep(.5)
     
-    # Return the final score and max_score after all questions are processed
-    return score, max_score
+    # Return the final score and max_score and incorrects after all questions are processed
+    return score, max_score, incorrects
                 
         
